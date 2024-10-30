@@ -5,6 +5,20 @@
     box-sizing: border-box;
 }
 body{
-    background: #01034ef9;
-    color: #fff;
+        background-color: black;
+        /* background-image: url("asus.jpg"); */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        text-align: center;
+    }
+footer{
+    background-color: gray;
+    /* background-image: url("asus.jpg"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
+ 
