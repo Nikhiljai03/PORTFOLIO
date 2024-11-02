@@ -4,9 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body{
+            background-color: rgb(19, 2, 35);
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(53, 10, 53);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(147, 69, 221);
+            font-size: 1.05rem;
+        }
+        .left {
+            font-size: 1.6rem;
+        }
+        .About{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        h1{
+            font-size: 3rem;
+            margin: 70px 0;;
+        }
+        .introduction{
+            font-size: 30px;
+            margin-left: 30px;
+        }
+        .experience{
+            font-size: 30px;
+            margin-left: 30px;
+        }
+
+        .futuregoals{
+            font-size: 30px;
+            margin-left: 30px;
+        }
+        .contact{
+            font-size: 30px;
+            margin-left: 30px;
+        }
+        .purple{
+            color: rgb(221, 73, 221);
+        }
+       
+
+    </style>
 </head>
-Myself Nikhil Jai
 <body>
+
+    <header>
+        <nav>
+            <div class="left">Nikhil's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="About"></section>
+        <div class="info">
+                <h1>About</h1>
+                <p class="introduction">Hello! I’m Nikhil, an IT student with a passion for software and web development.
+                My journey in technology began when I discovered the power of coding to solve problems and create innovative solutions.</p>
+
+                <p class="experience">I have experience in developing projects like a Library Management System and a Restaurant Order Management System, where I applied my skills in C programming and algorithms. My technical toolkit includes HTML, CSS, JavaScript, and Java, which I continually enhance through hands-on projects.</p>
+
+                <p class="futuregoals">I am driven by the challenge of turning ideas into functional applications and am excited about the future of technology. I aspire to deepen my knowledge in full-stack development and contribute to impactful projects that improve user experiences.
+                </p>
+
+                <p class="contact">When I’m not coding, you can find me exploring new technologies or diving into a good book. Feel free to connect with me on <a class="purple" href=https://www.linkedin.com/in/nikhil-jai-a5994930b/>LinkedIn</a> or drop me an email at [nikhilraina95@gmail.com].</p>
+        </div>        
     
 </body>
 </html>
