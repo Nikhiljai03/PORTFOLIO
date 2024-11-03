@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Services</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -12,7 +12,6 @@
             background-color: rgb(19, 2, 35);
             color: white;
             font-family: 'Poppins', sans-serif;
-            padding-bottom: 50px; /* Extra space at the bottom */
         }
         nav {
             display: flex;
@@ -40,40 +39,37 @@
         .left {
             font-size: 1.6rem;
         }
-
-        .about-section {
+        
+        .services {
             text-align: center;
             padding: 50px;
         }
-        .about-section h1 {
+        .services h1 {
             font-size: 3rem;
             margin-bottom: 40px;
             color: rgb(221, 73, 221);
         }
-        .about-content {
-            max-width: 800px;
-            margin: auto;
-            font-size: 1.2rem;
-            line-height: 1.6;
+        .service-item {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            border-radius: 8px;
             background-color: rgb(53, 10, 53);
-            padding: 30px;
-            border-radius: 10px;
+            color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
         }
-        .about-content h3 {
+        .service-item:hover {
+            transform: scale(1.05);
+        }
+        .service-item h3 {
+            font-size: 1.8rem;
             color: rgb(221, 73, 221);
-            margin-top: 20px;
-            font-size: 1.5rem;
         }
-        .about-content p {
-            margin: 15px 0;
-        }
-        .contact-links a {
-            color: rgb(221, 73, 221);
-            text-decoration: none;
-        }
-        .contact-links a:hover {
-            text-decoration: underline;
+        .service-item p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -94,22 +90,23 @@
         </nav>
     </header>
 
-    <section class="about-section">
-        <h1>About Me</h1>
-        <div class="about-content">
-            <h3>Introduction</h3>
-            <p>Hello! I’m Nikhil, an IT student passionate about software and web development. My journey in technology began when I discovered the power of coding to solve problems and create innovative solutions.</p>
-
-            <h3>Experience</h3>
-            <p>I have experience developing projects like a Library Management System and a Restaurant Order Management System, where I applied my skills in C programming and algorithms. My technical toolkit includes HTML, CSS, JavaScript, and Java, which I continually enhance through hands-on projects.</p>
-
-            <h3>Future Goals</h3>
-            <p>I am driven by the challenge of turning ideas into functional applications and am excited about the future of technology. I aspire to deepen my knowledge in full-stack development and contribute to impactful projects that improve user experiences.</p>
-
-            <h3>Contact</h3>
-            <p class="contact-links">
-                Let’s connect! Feel free to reach out on <a href="https://www.linkedin.com/in/nikhil-jai-a5994930b/" target="_blank">LinkedIn</a> or drop me an email at <a href="mailto:nikhilraina95@gmail.com">nikhilraina95@gmail.com</a>.
-            </p>
+    <section class="services">
+        <h1>My Services</h1>
+        <div class="service-item">
+            <h3>Web Development</h3>
+            <p>Building responsive, visually appealing websites with a focus on user experience and performance.</p>
+        </div>
+        <div class="service-item">
+            <h3>Full-Stack Development</h3>
+            <p>Providing complete solutions, from front-end interfaces to back-end logic, ensuring seamless functionality.</p>
+        </div>
+        <div class="service-item">
+            <h3>Software Development</h3>
+            <p>Creating tailored software solutions, from management systems to process automation tools.</p>
+        </div>
+        <div class="service-item">
+            <h3>Project Management & Consulting</h3>
+            <p>Helping plan and execute projects effectively, with a focus on achieving high-quality results on time.</p>
         </div>
     </section>
 

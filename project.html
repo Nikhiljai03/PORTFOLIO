@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+           * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(19, 2, 35);
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(53, 10, 53);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(147, 69, 221);
+            font-size: 1.05rem;
+        }
+        main hr{
+            border: 0;
+            background-color: rgb(221, 73, 221);
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .Projects {
+            margin-top: 40px;
+            padding: 40px 20px;
+            background-color: rgb(30, 10, 50);
+            color: white;
+            text-align: center;
+            }
+
+.Projects h1 {
+    font-size: 2.5rem;
+    color: rgb(221, 73, 221);
+    margin-bottom: 30px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: rgb(45, 15, 65);
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 300px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+    width: 20%;
+    height: 40px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 15px;
+}
+
+.project-title {
+    font-size: 1.6rem;
+    color: rgb(221, 73, 221);
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+.project-link:hover {
+    color: rgb(221, 73, 221);
+    text-decoration: underline;
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="left">Nikhil's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contacts.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="Projects">
+    <h1>Projects</h1>
+    <div class="project-list">
+        <div class="project-card">
+            <img src="path/to/your-image1.jpg" alt="Library Management System" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">Library Management System</h2>
+                <p class="project-description">A system developed in C programming to manage library resources and book inventory efficiently using linked lists.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="pics/store-sign.png" alt="Restaurant Order Management System" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">Restaurant Order Management System</h2>
+                <p class="project-description">An order management application using circular queues in C to streamline order processing and tracking in a restaurant setting.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="pics/store-sign.png" alt="Restaurant Order Management System" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">Portfolio</h2>
+                <p class="project-description">my Portfolio were you can find all details</p>
+                <a href="https://nikhiljai03.github.io/web-development-/" class="project-link">View Project</a>
+            </div>
+        </div>
+        <!-- Add more project cards here -->
+    </div>
+</section>
+
+    
+</body>
+</html>
