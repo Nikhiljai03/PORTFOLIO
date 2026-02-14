@@ -3,78 +3,366 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>Services - Nikhil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: rgb(19, 2, 35);
-            color: white;
-            font-family: 'Poppins', sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            background: linear-gradient(135deg, #0f051a 0%, #1a0a2e 50%, #16213e 100%);
+            color: #e0e0e0;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+        }
+
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            height: 80px;
-            background-color: rgb(53, 10, 53);
+            height: 70px;
+            padding: 0 60px;
+            background: rgba(15, 5, 26, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(221, 73, 221, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
         }
-        nav ul {
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
-        nav ul li a:hover {
-            color: rgb(147, 69, 221);
-            font-size: 1.05rem;
-        }
+
         .left {
             font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #dd49dd, #9345dd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        
+
+        nav ul {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #dd49dd, #9345dd);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #dd49dd;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
         .services {
             text-align: center;
-            padding: 50px;
+            padding: 80px 60px;
+            padding-top: 100px;
         }
+
+        .services-header {
+            margin-bottom: 100px;
+            animation: fadeInUp 0.8s ease;
+        }
+
         .services h1 {
-            font-size: 3rem;
-            margin-bottom: 40px;
-            color: rgb(221, 73, 221);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #dd49dd, #9345dd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
         }
+
+        .services-subtitle {
+            font-size: 1.3rem;
+            color: #c0c0c0;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .highlight-bar {
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #dd49dd, #9345dd);
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1300px;
+            margin: auto;
+        }
+
         .service-item {
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 600px;
-            border-radius: 8px;
-            background-color: rgb(53, 10, 53);
+            padding: 45px 35px;
+            border-radius: 20px;
+            background: rgba(53, 10, 53, 0.15);
             color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+            box-shadow: 0 8px 32px rgba(221, 73, 221, 0.1);
+            border: 2px solid rgba(221, 73, 221, 0.2);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
+
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(221, 73, 221, 0.1), rgba(147, 69, 221, 0.05));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .service-item:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .service-item:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .service-item:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
         .service-item:hover {
-            transform: scale(1.05);
+            transform: translateY(-20px);
+            box-shadow: 0 25px 60px rgba(221, 73, 221, 0.25);
+            border-color: rgba(221, 73, 221, 0.6);
+            background: rgba(53, 10, 53, 0.25);
         }
+
+        .service-item:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .service-item:hover .service-icon {
+            animation: floatHover 0.6s ease;
+        }
+
+        @keyframes floatHover {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px) scale(1.1); }
+            100% { transform: translateY(-10px); }
+        }
+
         .service-item h3 {
-            font-size: 1.8rem;
-            color: rgb(221, 73, 221);
+            font-size: 1.9rem;
+            background: linear-gradient(135deg, #dd49dd, #9345dd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 2;
         }
+
         .service-item p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #b8b8b8;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
+            flex-grow: 1;
+        }
+
+        .service-features {
+            text-align: left;
+            margin: 20px 0 25px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-features h4 {
+            color: #dd49dd;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 6px 0;
+            color: #a8a8a8;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: #dd49dd;
+            font-weight: bold;
             font-size: 1.2rem;
-            line-height: 1.5;
-            margin-top: 10px;
+        }
+
+        .service-cta {
+            display: inline-block;
+            margin-top: auto;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #dd49dd, #9345dd);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .service-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .service-cta:hover::before {
+            left: 100%;
+        }
+
+        .service-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(221, 73, 221, 0.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+                flex-direction: column;
+                height: auto;
+            }
+
+            nav ul {
+                gap: 15px;
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .services {
+                padding: 40px 20px;
+            }
+
+            .services-header {
+                margin-bottom: 60px;
+            }
+
+            .services h1 {
+                font-size: 2.5rem;
+                margin-bottom: 15px;
+            }
+
+            .services-subtitle {
+                font-size: 1.05rem;
+            }
+
+            .services-container {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .service-item {
+                padding: 30px 20px;
+            }
+
+            .service-icon {
+                font-size: 3rem;
+            }
+
+            .service-item h3 {
+                font-size: 1.5rem;
+            }
+
+            .service-item p {
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
-<body>s
-
+<body>
     <header>
         <nav>
             <div class="left">Nikhil's Portfolio</div>
@@ -84,29 +372,81 @@
                     <li><a href="About.html">About</a></li>
                     <li><a href="service.html">Services</a></li>
                     <li><a href="project.html">Projects</a></li>
-                    <li><a href="Contacts.html">Contact Me</a></li>
+                    <li><a href="contacts.html">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <section class="services">
-        <h1>My Services</h1>
-        <div class="service-item">
-            <h3>Web Development</h3>
-            <p>Building responsive, visually appealing websites with a focus on user experience and performance.</p>
+        <div class="services-header">
+            <h1>My Services</h1>
+            <div class="highlight-bar"></div>
+            <p class="services-subtitle">
+                I offer a comprehensive range of development services designed to transform your ideas into powerful digital solutions. Each service is tailored to meet your unique business needs.
+            </p>
         </div>
-        <div class="service-item">
-            <h3>Full-Stack Development</h3>
-            <p>Providing complete solutions, from front-end interfaces to back-end logic, ensuring seamless functionality.</p>
-        </div>
-        <div class="service-item">
-            <h3>Software Development</h3>
-            <p>Creating tailored software solutions, from management systems to process automation tools.</p>
-        </div>
-        <div class="service-item">
-            <h3>Project Management & Consulting</h3>
-            <p>Helping plan and execute projects effectively, with a focus on achieving high-quality results on time.</p>
+
+        <div class="services-container">
+            <div class="service-item">
+                <div class="service-icon">🌐</div>
+                <h3>Web Development</h3>
+                <p>Building responsive, visually appealing websites with a focus on user experience, performance, and modern design principles.</p>
+                <div class="service-features">
+                    <h4>What's Included</h4>
+                    <ul class="feature-list">
+                        <li>Responsive Design</li>
+                        <li>SEO Optimized</li>
+                        <li>Fast Performance</li>
+                        <li>Cross-browser Compatible</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">🛠️</div>
+                <h3>Full-Stack Development</h3>
+                <p>Providing complete solutions from front-end interfaces to back-end logic, ensuring seamless functionality and scalability.</p>
+                <div class="service-features">
+                    <h4>What's Included</h4>
+                    <ul class="feature-list">
+                        <li>Frontend & Backend</li>
+                        <li>Database Design</li>
+                        <li>API Development</li>
+                        <li>System Integration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">⚙️</div>
+                <h3>Software Development</h3>
+                <p>Creating tailored software solutions, from management systems to process automation tools that streamline your operations.</p>
+                <div class="service-features">
+                    <h4>What's Included</h4>
+                    <ul class="feature-list">
+                        <li>Custom Solutions</li>
+                        <li>Automation Tools</li>
+                        <li>Maintenance & Support</li>
+                        <li>Version Control</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">📋</div>
+                <h3>Project Management</h3>
+                <p>Expert guidance in planning and executing projects effectively, with a focus on achieving high-quality results on schedule.</p>
+                <div class="service-features">
+                    <h4>What's Included</h4>
+                    <ul class="feature-list">
+                        <li>Project Planning</li>
+                        <li>Team Leadership</li>
+                        <li>Quality Assurance</li>
+                        <li>Timeline Tracking</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
