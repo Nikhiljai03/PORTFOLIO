@@ -59,7 +59,7 @@ export const Navbar = () => {
             <a href="https://github.com/Nikhiljai03" target="_blank" rel="noreferrer" className="text-white/70 hover:text-primary transition-colors">
               <Github size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/nikhil-jai-a5994930b/" target="_blank" rel="noreferrer" className="text-white/70 hover:text-primary transition-colors">
+            <a href="https://www.linkedin.com/in/nikhil-jai/" target="_blank" rel="noreferrer" className="text-white/70 hover:text-primary transition-colors">
               <Linkedin size={20} />
             </a>
           </div>

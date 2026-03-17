@@ -13,7 +13,7 @@ export const Footer = () => {
         <div className="flex gap-6 mb-12">
           {[
             { icon: <Github size={24} />, href: "https://github.com/Nikhiljai03" },
-            { icon: <Linkedin size={24} />, href: "https://www.linkedin.com/in/nikhil-jai-a5994930b/" },
+            { icon: <Linkedin size={24} />, href: "https://www.linkedin.com/in/nikhil-jai/" },
             { icon: <Code2 size={24} />, href: "https://leetcode.com/u/NIKHILJAI03/" }, // LeetCode
             { icon: <Mail size={24} />, href: "mailto:nikhilraina95@gmail.com" },
           ].map((social, i) => (

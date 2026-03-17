@@ -29,5 +29,4 @@ yarn-error.log*
 next-env.d.ts
 
 # portfolio assets (user request)
-pics/
-public/pics/
+# Removed pics/ from ignore to allow deployment
