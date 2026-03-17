@@ -56,10 +56,14 @@ export const Hero = () => {
                   View My Work
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
                 </a>
-                <button className="px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 transition-all flex items-center gap-2">
+                <a 
+                  href="/Nikhil_Resume.pdf" 
+                  download 
+                  className="px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 transition-all flex items-center gap-2"
+                >
                   <Download size={18} />
                   Download CV
-                </button>
+                </a>
               </motion.div>
             </div>
           </div>
