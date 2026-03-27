@@ -57,7 +57,7 @@ export const Hero = () => {
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
                 </a>
                 <a 
-                  href="/Nikhil_Resume.pdf" 
+                  href="/NIKHIL_Resume.pdf" 
                   download 
                   className="px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 transition-all flex items-center gap-2"
                 >
