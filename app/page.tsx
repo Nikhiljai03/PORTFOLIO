@@ -36,6 +36,19 @@ const portfolioData = {
   ],
   projects: [
     {
+      name: 'Query Router - Multi-Model LLM Gateway',
+      timeframe: 'Recent',
+      tags: ['FastAPI', 'Redis', 'Kafka', 'Docker', 'AI/ML', 'Distributed Systems'],
+      github: 'https://github.com/Nikhiljai03/Multi-LLM-Query-Router',
+      bullets: [
+        'Intelligent routing system that directs queries to optimal AI models (8B/70B/120B) based on complexity, optimizing cost and performance with 40-60% cache hit rate.',
+        'Built 3-tier classification engine scoring queries by complexity indicators, achieving <20ms response time for cached queries.',
+        'Architected dual-provider setup (Groq + Together AI) with automatic failover, processing 560 tokens/sec with 99.9% uptime.',
+        'Implemented async FastAPI backend with Redis caching and Kafka event streaming for real-time analytics and monitoring.',
+        'Production-ready system with Docker Compose deployment, health checks, graceful degradation, and comprehensive error handling.'
+      ]
+    },
+    {
       name: 'Share Space',
       timeframe: 'Dec 2025',
       tags: ['Social Platform', 'React', 'Vercel', 'Next-gen'],
